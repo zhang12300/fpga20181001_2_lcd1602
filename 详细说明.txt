@@ -1,3 +1,6 @@
+/*本项目在原有代码的基础上增加了如下
+1.通过改变PWM的占空比来改变VO电压，调节对比度，发现3/4的占空比是比较理想的;
+2.通过LED指示灯来指示当前工作在哪个工作方式
 module lcd1602(clk,rst,lcd_e,lcd_rw,lcd_rs,data,led,pot);
 input clk,rst;
 output  lcd_e;
