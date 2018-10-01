@@ -1,0 +1,565 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Mon Oct  1 21:43:12 2018
+# Process ID: 24112
+# Current directory: C:/SPB_Data/learngit/fpga_project/fpga20181001_2_lcd1602/project_2/project_2.runs/synth_1
+# Command line: vivado.exe -log lcd1602.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source lcd1602.tcl
+# Log file: C:/SPB_Data/learngit/fpga_project/fpga20181001_2_lcd1602/project_2/project_2.runs/synth_1/lcd1602.vds
+# Journal file: C:/SPB_Data/learngit/fpga_project/fpga20181001_2_lcd1602/project_2/project_2.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source lcd1602.tcl -notrace
+Command: synth_design -top lcd1602 -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 24556 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 406.941 ; gain = 97.594
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'lcd1602' [C:/SPB_Data/learngit/fpga_project/fpga20181001_2_lcd1602/20181001_2_lcd1602.v:2]
+	Parameter SETFUNCTION1 bound to: 12'b000000001000 
+	Parameter SETFUNCTION1_1 bound to: 12'b000000000011 
+	Parameter IDLE bound to: 12'b000000000000 
+	Parameter CLEAR bound to: 12'b000000000001 
+	Parameter SETDDRAM bound to: 12'b000000000010 
+	Parameter SETFUNCTION bound to: 12'b000000000100 
+	Parameter SETFUNCTION2 bound to: 12'b000000010000 
+	Parameter SETFUNCTION2_1 bound to: 12'b000000011000 
+	Parameter SETFUNCTION3 bound to: 12'b000000100000 
+	Parameter SETFUNCTION3_1 bound to: 12'b000000110000 
+	Parameter SETFUNCTION4 bound to: 12'b000001000000 
+	Parameter SETFUNCTION4_1 bound to: 12'b000001100000 
+	Parameter SETSHIFT bound to: 12'b000010000000 
+	Parameter SWITCHMODE bound to: 12'b000100000000 
+	Parameter SETMODE bound to: 12'b001000000000 
+	Parameter SHIFT bound to: 12'b010000000000 
+	Parameter WRITERAM bound to: 12'b100000000000 
+	Parameter data_in bound to: Zhang Bingbing      Zhang Bingbing      3160105502          3160105502           - type: string 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/SPB_Data/learngit/fpga_project/fpga20181001_2_lcd1602/20181001_2_lcd1602.v:59]
+WARNING: [Synth 8-5788] Register lcd_rs_reg in module lcd1602 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/SPB_Data/learngit/fpga_project/fpga20181001_2_lcd1602/20181001_2_lcd1602.v:67]
+WARNING: [Synth 8-5788] Register lcd_rw_reg in module lcd1602 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/SPB_Data/learngit/fpga_project/fpga20181001_2_lcd1602/20181001_2_lcd1602.v:70]
+WARNING: [Synth 8-5788] Register data_reg in module lcd1602 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/SPB_Data/learngit/fpga_project/fpga20181001_2_lcd1602/20181001_2_lcd1602.v:71]
+INFO: [Synth 8-256] done synthesizing module 'lcd1602' (1#1) [C:/SPB_Data/learngit/fpga_project/fpga20181001_2_lcd1602/20181001_2_lcd1602.v:2]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 458.723 ; gain = 149.375
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 458.723 ; gain = 149.375
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/SPB_Data/learngit/fpga_project/fpga20181001_2_lcd1602/lcd1602_20181001.xdc]
+Finished Parsing XDC File [C:/SPB_Data/learngit/fpga_project/fpga20181001_2_lcd1602/lcd1602_20181001.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/SPB_Data/learngit/fpga_project/fpga20181001_2_lcd1602/lcd1602_20181001.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/lcd1602_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/lcd1602_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 826.906 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 826.906 ; gain = 517.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 826.906 ; gain = 517.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 826.906 ; gain = 517.559
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'lcd1602'
+INFO: [Synth 8-5546] ROM "clk4Hz" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "data_in_buf" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "led" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "data" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "lcd_rs" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element disp_count_reg was removed.  [C:/SPB_Data/learngit/fpga_project/fpga20181001_2_lcd1602/20181001_2_lcd1602.v:54]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                             0000 |                   00000000000000
+            SETFUNCTION1 |                             0001 |                   00000000001000
+            SETFUNCTION2 |                             0010 |                   00000000010000
+            SETFUNCTION3 |                             0011 |                   00000000100000
+            SETFUNCTION4 |                             0100 |                   00000001000000
+             SETFUNCTION |                             0101 |                   00000000000100
+                 SETMODE |                             0110 |                   00001000000000
+              SWITCHMODE |                             0111 |                   00000100000000
+                   CLEAR |                             1000 |                   00000000000001
+                SETDDRAM |                             1001 |                   00000000000010
+                WRITERAM |                             1010 |                   00100000000000
+                SETSHIFT |                             1011 |                   00000010000000
+                   SHIFT |                             1100 |                   00010000000000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'lcd1602'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 826.906 ; gain = 517.559
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     24 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	              640 Bit    Registers := 1     
+	               24 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	  13 Input      8 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+	  13 Input      4 Bit        Muxes := 1     
+	  16 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+	   3 Input      1 Bit        Muxes := 1     
+	  13 Input      1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module lcd1602 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     24 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	              640 Bit    Registers := 1     
+	               24 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	  13 Input      8 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+	  13 Input      4 Bit        Muxes := 1     
+	  16 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+	   3 Input      1 Bit        Muxes := 1     
+	  13 Input      1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "clk4Hz" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "data_in_buf" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "led" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "O30" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "data" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element disp_count_reg was removed.  [C:/SPB_Data/learngit/fpga_project/fpga20181001_2_lcd1602/20181001_2_lcd1602.v:54]
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[0]' (FDCE) to 'data_in_buf_reg[1]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[1]' (FDCE) to 'data_in_buf_reg[2]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[2]' (FDCE) to 'data_in_buf_reg[3]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[3]' (FDCE) to 'data_in_buf_reg[4]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[4]' (FDCE) to 'data_in_buf_reg[6]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[6]' (FDCE) to 'data_in_buf_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[8]' (FDCE) to 'data_in_buf_reg[7]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[9]' (FDCE) to 'data_in_buf_reg[7]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[10]' (FDCE) to 'data_in_buf_reg[7]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[11]' (FDCE) to 'data_in_buf_reg[7]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[12]' (FDCE) to 'data_in_buf_reg[7]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[14]' (FDCE) to 'data_in_buf_reg[7]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[15]' (FDCE) to 'data_in_buf_reg[7]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[16]' (FDCE) to 'data_in_buf_reg[17]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[17]' (FDCE) to 'data_in_buf_reg[18]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[18]' (FDCE) to 'data_in_buf_reg[19]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[19]' (FDCE) to 'data_in_buf_reg[20]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[20]' (FDCE) to 'data_in_buf_reg[22]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[22]' (FDCE) to 'data_in_buf_reg[23]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[24]' (FDCE) to 'data_in_buf_reg[25]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[25]' (FDCE) to 'data_in_buf_reg[26]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[26]' (FDCE) to 'data_in_buf_reg[27]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[27]' (FDCE) to 'data_in_buf_reg[28]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[28]' (FDCE) to 'data_in_buf_reg[30]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[30]' (FDCE) to 'data_in_buf_reg[31]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[32]' (FDCE) to 'data_in_buf_reg[33]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[33]' (FDCE) to 'data_in_buf_reg[34]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[34]' (FDCE) to 'data_in_buf_reg[35]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[35]' (FDCE) to 'data_in_buf_reg[36]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[36]' (FDCE) to 'data_in_buf_reg[38]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[38]' (FDCE) to 'data_in_buf_reg[39]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[40]' (FDCE) to 'data_in_buf_reg[41]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[41]' (FDCE) to 'data_in_buf_reg[42]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[42]' (FDCE) to 'data_in_buf_reg[43]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[43]' (FDCE) to 'data_in_buf_reg[44]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[44]' (FDCE) to 'data_in_buf_reg[46]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[46]' (FDCE) to 'data_in_buf_reg[47]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[48]' (FDCE) to 'data_in_buf_reg[49]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[49]' (FDCE) to 'data_in_buf_reg[50]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[50]' (FDCE) to 'data_in_buf_reg[51]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[51]' (FDCE) to 'data_in_buf_reg[52]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[52]' (FDCE) to 'data_in_buf_reg[54]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[54]' (FDCE) to 'data_in_buf_reg[55]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[56]' (FDCE) to 'data_in_buf_reg[57]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[57]' (FDCE) to 'data_in_buf_reg[58]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[58]' (FDCE) to 'data_in_buf_reg[59]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[59]' (FDCE) to 'data_in_buf_reg[60]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[60]' (FDCE) to 'data_in_buf_reg[62]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[62]' (FDCE) to 'data_in_buf_reg[63]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[64]' (FDCE) to 'data_in_buf_reg[65]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[65]' (FDCE) to 'data_in_buf_reg[66]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[66]' (FDCE) to 'data_in_buf_reg[67]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[67]' (FDCE) to 'data_in_buf_reg[68]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[68]' (FDCE) to 'data_in_buf_reg[70]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[70]' (FDCE) to 'data_in_buf_reg[71]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[72]' (FDCE) to 'data_in_buf_reg[73]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[73]' (FDCE) to 'data_in_buf_reg[74]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[74]' (FDCE) to 'data_in_buf_reg[75]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[75]' (FDCE) to 'data_in_buf_reg[76]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[76]' (FDCE) to 'data_in_buf_reg[78]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[78]' (FDCE) to 'data_in_buf_reg[79]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[80]' (FDCE) to 'data_in_buf_reg[82]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[81]' (FDPE) to 'data_in_buf_reg[84]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[82]' (FDCE) to 'data_in_buf_reg[83]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[83]' (FDCE) to 'data_in_buf_reg[86]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[86]' (FDCE) to 'data_in_buf_reg[87]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[88]' (FDCE) to 'data_in_buf_reg[90]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[90]' (FDCE) to 'data_in_buf_reg[91]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[91]' (FDCE) to 'data_in_buf_reg[94]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[94]' (FDCE) to 'data_in_buf_reg[95]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[96]' (FDPE) to 'data_in_buf_reg[98]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[99]' (FDCE) to 'data_in_buf_reg[102]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[102]' (FDCE) to 'data_in_buf_reg[103]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[104]' (FDPE) to 'data_in_buf_reg[106]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[107]' (FDCE) to 'data_in_buf_reg[110]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[110]' (FDCE) to 'data_in_buf_reg[111]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[112]' (FDCE) to 'data_in_buf_reg[114]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[115]' (FDCE) to 'data_in_buf_reg[118]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[118]' (FDCE) to 'data_in_buf_reg[119]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[123]' (FDCE) to 'data_in_buf_reg[126]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[126]' (FDCE) to 'data_in_buf_reg[127]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[131]' (FDCE) to 'data_in_buf_reg[134]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[134]' (FDCE) to 'data_in_buf_reg[135]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[139]' (FDCE) to 'data_in_buf_reg[142]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[142]' (FDCE) to 'data_in_buf_reg[143]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[147]' (FDCE) to 'data_in_buf_reg[150]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[150]' (FDCE) to 'data_in_buf_reg[151]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[155]' (FDCE) to 'data_in_buf_reg[158]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[158]' (FDCE) to 'data_in_buf_reg[159]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[163]' (FDCE) to 'data_in_buf_reg[166]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[166]' (FDCE) to 'data_in_buf_reg[167]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[171]' (FDCE) to 'data_in_buf_reg[174]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[174]' (FDCE) to 'data_in_buf_reg[175]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[179]' (FDCE) to 'data_in_buf_reg[182]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[182]' (FDCE) to 'data_in_buf_reg[183]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[187]' (FDCE) to 'data_in_buf_reg[190]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[190]' (FDCE) to 'data_in_buf_reg[191]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[195]' (FDCE) to 'data_in_buf_reg[198]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[198]' (FDCE) to 'data_in_buf_reg[199]'
+INFO: [Synth 8-3886] merging instance 'data_in_buf_reg[203]' (FDCE) to 'data_in_buf_reg[206]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (lcd_rw_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data_in_buf_reg[7] )
+WARNING: [Synth 8-3332] Sequential element (data_in_buf_reg[7]) is unused and will be removed from module lcd1602.
+WARNING: [Synth 8-3332] Sequential element (lcd_rw_reg) is unused and will be removed from module lcd1602.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:55 ; elapsed = 00:00:58 . Memory (MB): peak = 826.906 ; gain = 517.559
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:11 ; elapsed = 00:01:15 . Memory (MB): peak = 826.906 ; gain = 517.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:12 ; elapsed = 00:01:17 . Memory (MB): peak = 848.082 ; gain = 538.734
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:13 ; elapsed = 00:01:18 . Memory (MB): peak = 851.582 ; gain = 542.234
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:15 ; elapsed = 00:01:19 . Memory (MB): peak = 851.582 ; gain = 542.234
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:15 ; elapsed = 00:01:19 . Memory (MB): peak = 851.582 ; gain = 542.234
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:15 ; elapsed = 00:01:19 . Memory (MB): peak = 851.582 ; gain = 542.234
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:15 ; elapsed = 00:01:19 . Memory (MB): peak = 851.582 ; gain = 542.234
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:15 ; elapsed = 00:01:19 . Memory (MB): peak = 851.582 ; gain = 542.234
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:15 ; elapsed = 00:01:19 . Memory (MB): peak = 851.582 ; gain = 542.234
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+----------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name             | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+----------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|lcd1602     | data_in_buf_reg[638] | 5      | 4     | YES          | NO                 | YES               | 4      | 0       | 
+|lcd1602     | data_in_buf_reg[590] | 8      | 3     | YES          | NO                 | YES               | 3      | 0       | 
+|lcd1602     | data_in_buf_reg[581] | 13     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|lcd1602     | data_in_buf_reg[421] | 43     | 1     | YES          | NO                 | YES               | 0      | 2       | 
+|lcd1602     | data_in_buf_reg[316] | 10     | 3     | YES          | NO                 | YES               | 3      | 0       | 
+|lcd1602     | data_in_buf_reg[61]  | 6      | 7     | YES          | NO                 | YES               | 7      | 0       | 
+|lcd1602     | data_in_buf_reg[628] | 19     | 2     | YES          | NO                 | YES               | 0      | 2       | 
+|lcd1602     | data_in_buf_reg[531] | 7      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|lcd1602     | data_in_buf_reg[522] | 9      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|lcd1602     | data_in_buf_reg[250] | 14     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|lcd1602     | data_in_buf_reg[248] | 12     | 1     | YES          | NO                 | YES               | 1      | 0       | 
++------------+----------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     2|
+|2     |CARRY4  |    30|
+|3     |LUT1    |     5|
+|4     |LUT2    |    57|
+|5     |LUT3    |    66|
+|6     |LUT4    |    22|
+|7     |LUT5    |    23|
+|8     |LUT6    |    75|
+|9     |SRL16E  |    22|
+|10    |SRLC32E |     4|
+|11    |FDCE    |   114|
+|12    |FDPE    |   129|
+|13    |FDRE    |    60|
+|14    |IBUF    |     2|
+|15    |OBUF    |    16|
++------+--------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |   627|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:15 ; elapsed = 00:01:19 . Memory (MB): peak = 851.582 ; gain = 542.234
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:53 ; elapsed = 00:01:06 . Memory (MB): peak = 851.582 ; gain = 174.051
+Synthesis Optimization Complete : Time (s): cpu = 00:01:16 ; elapsed = 00:01:20 . Memory (MB): peak = 851.582 ; gain = 542.234
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 32 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+210 Infos, 7 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:18 ; elapsed = 00:01:24 . Memory (MB): peak = 851.582 ; gain = 554.223
+INFO: [Common 17-1381] The checkpoint 'C:/SPB_Data/learngit/fpga_project/fpga20181001_2_lcd1602/project_2/project_2.runs/synth_1/lcd1602.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file lcd1602_utilization_synth.rpt -pb lcd1602_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.062 . Memory (MB): peak = 851.582 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Oct  1 21:44:51 2018...
